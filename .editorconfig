@@ -1,0 +1,110 @@
+root = true
+
+# Configuração padrão para todos os arquivos
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+# Arquivos Markdown
+
+[*.md]
+trim_trailing_whitespace = false
+indent_size = 2
+
+# Arquivos YAML
+
+[*.{yml,yaml}]
+indent_size = 2
+
+# Arquivos JSON
+
+[*.json]
+indent_size = 2
+
+# Arquivos XML
+
+[*.xml]
+indent_size = 4
+
+# Java
+
+[*.java]
+indent_style = space
+indent_size = 4
+
+# JavaScript
+
+[*.js]
+indent_style = space
+indent_size = 2
+
+# JSX
+
+[*.jsx]
+indent_style = space
+indent_size = 2
+
+# TypeScript
+
+[*.ts]
+indent_style = space
+indent_size = 2
+
+# TSX
+
+[*.tsx]
+indent_style = space
+indent_size = 2
+
+# CSS
+
+[*.css]
+indent_style = space
+indent_size = 2
+
+# SCSS
+
+[*.scss]
+indent_style = space
+indent_size = 2
+
+# HTML
+
+[*.html]
+indent_style = space
+indent_size = 2
+
+# SQL
+
+[*.sql]
+indent_style = space
+indent_size = 4
+
+# Shell Script
+
+[*.sh]
+indent_style = space
+indent_size = 2
+
+# Docker
+
+[Dockerfile]
+indent_style = space
+indent_size = 2
+
+# Propriedades do Spring
+
+[*.properties]
+indent_style = space
+indent_size = 2
+
+# GitHub Actions
+
+[*.{yaml,yml}]
+indent_style = space
+indent_size = 2
