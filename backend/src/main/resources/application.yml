@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: gtp-backend
+
+  profiles:
+    active: dev
