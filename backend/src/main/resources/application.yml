@@ -1,6 +1,6 @@
 spring:
   application:
-    name: gtp-backend
+    name: gtp-2
 
   profiles:
     active: dev
