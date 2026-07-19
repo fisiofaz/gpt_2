@@ -204,7 +204,24 @@ npm run dev
 
 🚧 Em desenvolvimento.
 
-A documentação da versão 1.0 encontra-se concluída e o projeto encontra-se em fase de implementação.
+## Progresso
+
+### Sprint 1
+- Estrutura inicial do projeto
+- Configuração Spring Boot
+- PostgreSQL
+- Flyway
+- Arquitetura em camadas
+
+### Sprint 2
+- Infraestrutura Shared
+- Módulo Congregation
+- CRUD completo
+- Flyway
+- OpenAPI
+- Tratamento global de exceções
+- MapStruct
+- Testes realizados via Postman
 
 ---
 
