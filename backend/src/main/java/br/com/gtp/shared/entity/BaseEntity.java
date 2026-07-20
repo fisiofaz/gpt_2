@@ -15,6 +15,11 @@ import jakarta.persistence.EntityListeners;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 public abstract class BaseEntity {
@@ -37,7 +42,5 @@ public abstract class BaseEntity {
     @LastModifiedBy
     @Column(length = 100)
     private String updatedBy;
-
-    // getters e setters
 
 }
