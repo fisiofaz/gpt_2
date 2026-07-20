@@ -1,218 +1,334 @@
-# Sprint 01 — Fundação do Projeto
+# Sprint 01
 
-## Informações da Sprint
+**Versão:** 0.1.0
 
-**Projeto:** Gestor de Territórios e Publicações (GTP)
+**Período:** Julho/2026
 
-**Objetivo:**  
-Criar a fundação técnica do projeto, estabelecendo a arquitetura inicial, organização dos códigos, configurações de ambiente e estrutura necessária para evolução do sistema.
-
-**Status:** Planejada
+**Status:** ✅ Concluída
 
 ---
 
-# Objetivo Principal
+# Objetivo
 
-Preparar o ambiente completo de desenvolvimento do GTP, garantindo uma base organizada, escalável e seguindo boas práticas de arquitetura de software.
+Estruturar a base do projeto GTP (Gestor de Territórios e Publicações), definindo a arquitetura inicial, a organização dos módulos e a infraestrutura necessária para o desenvolvimento das próximas funcionalidades.
 
 ---
 
-# Escopo da Sprint
+# Backlog da Sprint
+
+| Status | Item |
+|---------|------|
+| ✅ | Criar repositório GitHub |
+| ✅ | Estruturar projeto Backend |
+| ✅ | Estruturar projeto Frontend |
+| ✅ | Configurar Maven |
+| ✅ | Configurar React + Vite |
+| ✅ | Configurar PostgreSQL |
+| ✅ | Configurar Flyway |
+| ✅ | Definir arquitetura em camadas |
+| ✅ | Criar documentação inicial |
+
+---
+
+# Funcionalidades Implementadas
 
 ## Backend
 
-### Configuração Inicial
-
-Implementar:
-
-- Projeto Spring Boot 3.
-- Java 21 LTS.
-- Maven.
-- Configuração de Profiles.
-- Configuração inicial de banco de dados.
-- Configuração de variáveis de ambiente.
-
-Tecnologias:
-
+- Projeto Spring Boot 3
 - Java 21
-- Spring Boot 3
-- Spring Data JPA
-- Hibernate
-- PostgreSQL
-- Flyway
-- Lombok
-- MapStruct
+- Maven
+- Estrutura em camadas (Clean Architecture)
+- Organização por módulos
 
----
+## Frontend
 
-# Arquitetura Backend
-
-Criar estrutura baseada em módulos e responsabilidades.
-
-Estrutura inicial:
-
-br.com.gtp
-├── auth
-│
-├── congregation
-│
-├── people
-│
-├── territories
-│
-├── publications
-│
-├── orders
-│
-├── notifications
-│
-├── reports
-│
-├── settings
-│
-├── audit
-│
-└── shared
-
----
-
-# Camadas Internas
-
-Cada módulo seguirá:
-
-module
-├── application
-│
-├── domain
-│
-├── infrastructure
-│
-└── interfaces
-
-----
-
-# Responsabilidades:
-
-## Domain
-
-- Entidades.
-- Regras de negócio.
-- Serviços de domínio.
-
-## Application
-
-- Casos de uso.
-- Orquestração da aplicação.
-
-## Infrastructure
-
-- Banco de dados.
-- Integrações.
-- Implementações técnicas.
-
-## Interfaces
-
-- Controllers.
-- DTOs.
-- Entrada e saída da API.
-
----
-
-# Frontend
-
-Criar estrutura inicial React.
-
-Tecnologias:
-
-- React
+- React 19
 - Vite
 - React Router
 - Axios
-- CSS Modules
+- Material UI
 
-Estrutura:
+## Banco de Dados
 
-src
-├── components
-│
-├── pages
-│
-├── routes
-│
-├── services
-│
-├── contexts
-│
-├── hooks
-│
-├── utils
-│
-└── assets
+- PostgreSQL
+- Flyway configurado
+
+## Infraestrutura
+
+- Docker
+- Docker Compose
+- Estrutura inicial do projeto
+
+## Documentação
+
+- README
+- Documento de Arquitetura
+- Roadmap inicial
 
 ---
 
-# Funcionalidades
+# Estrutura Criada
 
-Implementar:
+```text
+gtp/
 
-- Layout principal.
-- Rotas básicas.
-- Página inicial.
-- Estrutura de componentes.
-- Comunicação inicial com API.
-
----
-
-# Banco de Dados
-
-Preparar:
-
-- Configuração PostgreSQL.
-- Migrações Flyway.
-- Estrutura inicial.
-
-Exemplo:
-
-db
-├── V1__initial_schema.sql
+backend/
+frontend/
+database/
+docs/
+docker/
+assets/
+api/
+```
 
 ---
 
-# Documentação
+# Tecnologias Utilizadas
 
-Criar:
-
-- README.
-- Arquitetura Backend.
-- Arquitetura Frontend.
-- Guia de desenvolvimento.
-
----
-
-# Testes
-
-Configurar:
-
-- JUnit 5.
-- Mockito.
-- Estrutura de testes.
+- Java 21
+- Spring Boot 3
+- PostgreSQL
+- Flyway
+- React
+- Vite
+- Docker
+- Git
+- GitHub
 
 ---
 
-# Critérios de Aceitação
+# Resultado da Sprint
 
-✔ Backend inicia corretamente.
-
-✔ Frontend executa sem erros.
-
-✔ Estrutura arquitetural criada.
-
-✔ Banco configurado.
-
-✔ Projeto versionado no GitHub.
+Foi criada toda a fundação do projeto GTP, estabelecendo a arquitetura, a estrutura dos diretórios, o banco de dados, a documentação inicial e o ambiente de desenvolvimento.
 
 ---
 
-# Resultado Esperado
+# Próxima Sprint
 
-Ao final da Sprint 01 o GTP possuirá uma base profissional preparada para implementação das funcionalidades de negócio.
+- Infraestrutura Shared
+- CRUD de Congregações
+- OpenAPI
+- Tratamento Global de Exceções
+- MapStruct# Sprint 01
+
+**Versão:** 0.1.0
+
+**Período:** Julho/2026
+
+**Status:** ✅ Concluída
+
+---
+
+# Objetivo
+
+Estruturar a base do projeto GTP (Gestor de Territórios e Publicações), definindo a arquitetura inicial, a organização dos módulos e a infraestrutura necessária para o desenvolvimento das próximas funcionalidades.
+
+---
+
+# Backlog da Sprint
+
+| Status | Item |
+|---------|------|
+| ✅ | Criar repositório GitHub |
+| ✅ | Estruturar projeto Backend |
+| ✅ | Estruturar projeto Frontend |
+| ✅ | Configurar Maven |
+| ✅ | Configurar React + Vite |
+| ✅ | Configurar PostgreSQL |
+| ✅ | Configurar Flyway |
+| ✅ | Definir arquitetura em camadas |
+| ✅ | Criar documentação inicial |
+
+---
+
+# Funcionalidades Implementadas
+
+## Backend
+
+- Projeto Spring Boot 3
+- Java 21
+- Maven
+- Estrutura em camadas (Clean Architecture)
+- Organização por módulos
+
+## Frontend
+
+- React 19
+- Vite
+- React Router
+- Axios
+- Material UI
+
+## Banco de Dados
+
+- PostgreSQL
+- Flyway configurado
+
+## Infraestrutura
+
+- Docker
+- Docker Compose
+- Estrutura inicial do projeto
+
+## Documentação
+
+- README
+- Documento de Arquitetura
+- Roadmap inicial
+
+---
+
+# Estrutura Criada
+
+```text
+gtp/
+
+backend/
+frontend/
+database/
+docs/
+docker/
+assets/
+api/
+```
+
+---
+
+# Tecnologias Utilizadas
+
+- Java 21
+- Spring Boot 3
+- PostgreSQL
+- Flyway
+- React
+- Vite
+- Docker
+- Git
+- GitHub
+
+---
+
+# Resultado da Sprint
+
+Foi criada toda a fundação do projeto GTP, estabelecendo a arquitetura, a estrutura dos diretórios, o banco de dados, a documentação inicial e o ambiente de desenvolvimento.
+
+---
+
+# Próxima Sprint
+
+- Infraestrutura Shared
+- CRUD de Congregações
+- OpenAPI
+- Tratamento Global de Exceções
+- MapStruct# Sprint 01
+
+**Versão:** 0.1.0
+
+**Período:** Julho/2026
+
+**Status:** ✅ Concluída
+
+---
+
+# Objetivo
+
+Estruturar a base do projeto GTP (Gestor de Territórios e Publicações), definindo a arquitetura inicial, a organização dos módulos e a infraestrutura necessária para o desenvolvimento das próximas funcionalidades.
+
+---
+
+# Backlog da Sprint
+
+| Status | Item |
+|---------|------|
+| ✅ | Criar repositório GitHub |
+| ✅ | Estruturar projeto Backend |
+| ✅ | Estruturar projeto Frontend |
+| ✅ | Configurar Maven |
+| ✅ | Configurar React + Vite |
+| ✅ | Configurar PostgreSQL |
+| ✅ | Configurar Flyway |
+| ✅ | Definir arquitetura em camadas |
+| ✅ | Criar documentação inicial |
+
+---
+
+# Funcionalidades Implementadas
+
+## Backend
+
+- Projeto Spring Boot 3
+- Java 21
+- Maven
+- Estrutura em camadas (Clean Architecture)
+- Organização por módulos
+
+## Frontend
+
+- React 19
+- Vite
+- React Router
+- Axios
+- Material UI
+
+## Banco de Dados
+
+- PostgreSQL
+- Flyway configurado
+
+## Infraestrutura
+
+- Docker
+- Docker Compose
+- Estrutura inicial do projeto
+
+## Documentação
+
+- README
+- Documento de Arquitetura
+- Roadmap inicial
+
+---
+
+# Estrutura Criada
+
+```text
+gtp/
+
+backend/
+frontend/
+database/
+docs/
+docker/
+assets/
+api/
+```
+
+---
+
+# Tecnologias Utilizadas
+
+- Java 21
+- Spring Boot 3
+- PostgreSQL
+- Flyway
+- React
+- Vite
+- Docker
+- Git
+- GitHub
+
+---
+
+# Resultado da Sprint
+
+Foi criada toda a fundação do projeto GTP, estabelecendo a arquitetura, a estrutura dos diretórios, o banco de dados, a documentação inicial e o ambiente de desenvolvimento.
+
+---
+
+# Próxima Sprint
+
+- Infraestrutura Shared
+- CRUD de Congregações
+- OpenAPI
+- Tratamento Global de Exceções
+- MapStruct
