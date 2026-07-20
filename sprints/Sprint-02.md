@@ -1,162 +1,253 @@
-# Sprint 02 — Autenticação e Gestão de Usuários
+# Sprint 02
 
-## Informações da Sprint
+**Versão:** 0.2.0
 
-**Projeto:** Gestor de Territórios e Publicações (GTP)
+**Período:** Julho/2026
 
-**Objetivo:**  
-Implementar autenticação, autorização e gerenciamento de usuários utilizando segurança baseada em JWT.
-
-**Status:** Planejada
+**Status:** ✅ Concluída
 
 ---
 
-# Objetivo Principal
+# Objetivo
 
-Criar o módulo de segurança do sistema permitindo controle de acesso através de usuários, perfis e permissões.
-
----
-
-# Escopo da Sprint
-
-# Backend
-
-## Módulo Auth
-
-Criar:
-- Login.
-- Logout.
-- Geração de token JWT.
-- Validação de token.
-- Controle de sessão.
+Implementar a infraestrutura compartilhada do sistema (Shared) e desenvolver o primeiro módulo funcional do GTP, estabelecendo o padrão arquitetural que será utilizado em todos os demais módulos.
 
 ---
 
-# Entidades
+# Backlog da Sprint
 
-## User
-
-Campos:
-- id
-- nome
-- email
-- senha
-- ativo
-- createdAt
-- updatedAt
-
-## Role
-
-Campos:
-- id
-- nome
-- descricao
-
-## Permission
-
-Campos:
-- id
-- nome
-- descricao
+| Status | Item |
+|---------|------|
+| ✅ | Criar módulo Shared |
+| ✅ | Criar módulo Congregation |
+| ✅ | Implementar CRUD de Congregações |
+| ✅ | Criar DTOs |
+| ✅ | Implementar MapStruct |
+| ✅ | Criar Services |
+| ✅ | Criar Controllers |
+| ✅ | Criar Repositories |
+| ✅ | Configurar OpenAPI (Swagger) |
+| ✅ | Implementar tratamento global de exceções |
+| ✅ | Configurar validações |
+| ✅ | Criar migrations Flyway |
+| ✅ | Testar API via Postman |
 
 ---
 
-# Segurança
+# Funcionalidades Implementadas
 
-Implementar:
+## Shared
 
-- Spring Security.
-- JWT Authentication Filter.
-- Password Encoder.
-- Controle de permissões.
+Foi criada toda a infraestrutura compartilhada do projeto, utilizada por todos os módulos.
 
----
+### Componentes
 
-# Endpoints
-
-## Autenticação
-
-- POST /api/v1/auth/login
-- POST /api/v1/auth/logout
-- POST /api/v1/auth/refresh
+- BaseEntity
+- Auditoria
+- Exceptions
+- GlobalExceptionHandler
+- ApiResponse
+- ApiError
+- Enums compartilhados
+- Configurações comuns
 
 ---
 
-## Usuários
+## Módulo Congregation
 
-- GET /api/v1/users
-- POST /api/v1/users
-- PUT /api/v1/users/{id}
-- DELETE /api/v1/users/{id}
+Primeiro módulo funcional do sistema.
 
----
+### Implementado
 
-# Frontend
-
-Criar:
-
-## Página Login
-
-Funcionalidades:
-
-- Email.
-- Senha.
-- Validação.
-- Mensagens de erro.
+- Entidade Congregation
+- Repository
+- Service
+- Controller
+- DTOs
+- Mapper (MapStruct)
+- Use Cases
+- Validações
+- CRUD completo
 
 ---
 
-# Controle de Rotas
+## Banco de Dados
 
-Implementar:
+### Flyway
 
-- AuthContext.
-- PrivateRoute.
-- Persistência do usuário.
-- Controle por perfil.
+Implementadas as migrations do módulo Congregation.
 
-Estrutura:
-- contexts
-- AuthContext.jsx
-- routes
-- PrivateRoute.jsx
+Exemplo:
+
+- V1__Initial.sql
+- V2__Create_Congregation.sql
 
 ---
 
-# Perfis Iniciais
+## API REST
 
-Criar:
-- ADMIN
-- ANCIÃO
-- PUBLICADOR
-- VISUALIZADOR
+Implementados os endpoints REST.
 
----
+### Endpoints
 
-# Testes
-
-Implementar:
-
-- Testes de autenticação.
-- Testes de autorização.
-- Testes de usuários.
+| Método | Endpoint | Descrição |
+|---------|----------|-----------|
+| GET | /api/v1/congregations | Listar |
+| GET | /api/v1/congregations/{id} | Buscar |
+| POST | /api/v1/congregations | Criar |
+| PUT | /api/v1/congregations/{id} | Atualizar |
+| DELETE | /api/v1/congregations/{id} | Excluir |
 
 ---
 
-# Critérios de Aceitação
+## Documentação
 
-✔ Usuário consegue realizar login.
+Implementação da documentação automática utilizando:
 
-✔ Token JWT funcionando.
-
-✔ Rotas protegidas.
-
-✔ Perfis aplicados corretamente.
-
-✔ Usuários gerenciáveis.
+- OpenAPI
+- Swagger UI
 
 ---
 
-# Resultado Esperado
+## Tratamento de Exceções
 
-Ao final da Sprint 02 o GTP terá controle seguro de acesso e base para expansão dos módulos.
+Implementado tratamento global utilizando:
+
+- ResourceNotFoundException
+- BusinessException
+- GlobalExceptionHandler
+
+Padronização das respostas de erro da API.
+
+---
+
+## Validações
+
+Implementadas validações utilizando Jakarta Validation.
+
+Exemplos:
+
+- @NotBlank
+- @NotNull
+- @Email
+- @Size
+
+---
+
+# Estrutura Criada
+
+```text
+backend/
+
+shared/
+├── config/
+├── exception/
+├── response/
+├── enums/
+└── entity/
+
+congregation/
+├── application/
+│   ├── dto/
+│   ├── mapper/
+│   ├── service/
+│   └── usecase/
+│
+├── domain/
+│   ├── entity/
+│   └── repository/
+│
+└── interfaces/
+    └── controller/
+```
+
+---
+
+# Testes Realizados
+
+| Teste | Resultado |
+|--------|-----------|
+| Criar Congregação | ✅ |
+| Buscar Congregação | ✅ |
+| Atualizar Congregação | ✅ |
+| Excluir Congregação | ✅ |
+| Validação de Campos | ✅ |
+| Tratamento de Exceções | ✅ |
+| Testes via Postman | ✅ |
+
+---
+
+# Problemas Encontrados
+
+| Problema | Solução |
+|----------|---------|
+| Ajustes no MapStruct | Configuração do componentModel="spring" |
+| Ajustes nas migrations | Revisão das versões Flyway |
+| Padronização das respostas | Criação do ApiResponse e ApiError |
+
+---
+
+# Tecnologias Utilizadas
+
+- Java 21
+- Spring Boot 3
+- Spring Data JPA
+- Hibernate
+- PostgreSQL 17
+- Flyway
+- MapStruct
+- Lombok
+- Jakarta Validation
+- OpenAPI / Swagger
+- Maven
+- Postman
+
+---
+
+# Commits
+
+Principais commits da Sprint 2:
+
+- feat(shared): criar infraestrutura compartilhada
+- feat(congregation): implementar módulo Congregation
+- feat(api): adicionar documentação OpenAPI
+- refactor(shared): padronizar tratamento de exceções
+
+---
+
+# Pull Request
+
+**Branch**
+
+```
+feature/backend-base
+```
+
+**Status**
+
+✅ Merge realizado com sucesso.
+
+---
+
+# Resultado da Sprint
+
+A Sprint 2 consolidou a arquitetura base do GTP, estabelecendo os padrões de desenvolvimento que serão reutilizados em todos os módulos futuros. Foi implementada a infraestrutura compartilhada do sistema e entregue o primeiro módulo funcional (Congregation), incluindo CRUD completo, documentação da API, tratamento global de exceções e testes de integração via Postman.
+
+---
+
+# Próxima Sprint
+
+## Objetivos
+
+- Implementar o módulo Users
+- Spring Security
+- JWT
+- Login
+- Controle de autenticação
+- Controle de autorização
+
+---
+
+# Observações
+
+A infraestrutura criada nesta Sprint passou a servir como base para todos os módulos do sistema, garantindo padronização, reutilização de código e escalabilidade para a evolução do GTP.
