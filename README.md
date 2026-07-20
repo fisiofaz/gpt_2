@@ -9,22 +9,29 @@
 
 ---
 
-## Sobre o Projeto
+# Sobre o Projeto
 
 O **Gestor de Territórios e Publicações (GTP)** é uma plataforma web desenvolvida para modernizar e centralizar o gerenciamento de territórios, publicações, usuários e processos administrativos utilizados pelas congregações.
 
-O sistema foi projetado com foco em **segurança**, **escalabilidade**, **manutenibilidade** e **experiência do usuário**, utilizando tecnologias modernas e boas práticas de Engenharia de Software.
+O sistema foi projetado com foco em:
+
+- Segurança
+- Escalabilidade
+- Manutenibilidade
+- Arquitetura Limpa
+- Boas práticas de Engenharia de Software
+- Experiência do usuário
 
 ---
 
-## Objetivos
+# Objetivos
 
 - Centralizar o gerenciamento dos territórios.
 - Controlar empréstimos e devoluções de publicações.
 - Gerenciar usuários, perfis e permissões.
 - Disponibilizar dashboards e indicadores.
 - Automatizar processos administrativos.
-- Garantir rastreabilidade e auditoria das operações.
+- Garantir rastreabilidade e auditoria.
 - Oferecer uma arquitetura preparada para crescimento.
 
 ---
@@ -72,7 +79,7 @@ Backend (Spring Boot)
 
 ## Banco de Dados
 
-- PostgreSQL
+- PostgreSQL 17
 - Flyway
 
 ## Infraestrutura
@@ -91,93 +98,71 @@ Backend (Spring Boot)
 
 # Estrutura do Projeto
 
-```
+```text
 gtp/
 
 ├── backend/
 ├── frontend/
 ├── database/
-│   ├── migrations/
-│   ├── scripts/
-│   └── modelagem/
 ├── docs/
-├── diagrams/
 ├── docker/
 ├── api/
-└── assets/
+├── diagrams/
+├── assets/
+├── CHANGELOG.md
+├── ROADMAP.md
+└── README.md
 ```
 
 ---
 
 # Documentação
 
-A documentação completa encontra-se na pasta **docs/**.
+Toda a documentação técnica encontra-se na pasta **docs/**.
 
-Ela contempla:
+## Documentos disponíveis
 
 - Introdução
 - Requisitos
-- Regras de Negócio
 - Casos de Uso
-- Modelo de Dados
+- Regras de Negócio
 - Arquitetura
 - Backend
 - Frontend
-- APIs
+- APIs REST
 - Banco de Dados
 - Segurança
 - Testes
 - Deploy
-- Manuais
-- Roadmap
+- Diagramas
+- Sprints
 
 ---
 
-# Principais Funcionalidades
+# Funcionalidades
+
+## Implementadas
 
 - Autenticação JWT
-- Controle de usuários
-- Perfis e permissões
-- Congregações
-- Territórios
+- Spring Security
+- Controle de Usuários
+- Controle de Congregações
+- CRUD REST
+- Flyway
+- MapStruct
+- Tratamento Global de Exceções
+
+## Em desenvolvimento
+
 - Publicadores
+- Territórios
 - Publicações
 - Empréstimos
 - Dashboard
 - Relatórios
 - Auditoria
-- Logs
+- Notificações
 - Configurações
-- Notificações
-
----
-
-# Roadmap
-
-## Versão 1.0
-
-- Estrutura do projeto
-- Autenticação
-- Usuários
-- Perfis
-- Congregações
-- Territórios
-- Publicações
-
-## Versão 1.1
-
-- Dashboard
-- Relatórios
-- Auditoria
-- Notificações
-
-## Versão 2.0
-
-- Aplicativo Mobile
-- Progressive Web App (PWA)
-- Integrações
-- Inteligência Artificial
-- Analytics Avançado
 
 ---
 
@@ -202,26 +187,26 @@ npm run dev
 
 # Status do Projeto
 
-🚧 Em desenvolvimento.
+🚧 Em desenvolvimento
 
 ## Progresso
 
-### Sprint 1
-- Estrutura inicial do projeto
-- Configuração Spring Boot
-- PostgreSQL
-- Flyway
-- Arquitetura em camadas
+| Sprint | Status |
+|---------|--------|
+| Sprint 1 | ✅ Concluída |
+| Sprint 2 | ✅ Concluída |
+| Sprint 3 | ✅ Concluída |
+| Sprint 4 | ⏳ Em planejamento |
 
-### Sprint 2
-- Infraestrutura Shared
-- Módulo Congregation
-- CRUD completo
-- Flyway
-- OpenAPI
-- Tratamento global de exceções
-- MapStruct
-- Testes realizados via Postman
+---
+
+# Evolução do Projeto
+
+O histórico completo de evolução está documentado em:
+
+- `CHANGELOG.md`
+- `ROADMAP.md`
+- `docs/sprints/`
 
 ---
 
@@ -235,9 +220,9 @@ Leia o arquivo **CONTRIBUTING.md** antes de enviar Pull Requests.
 
 # Licença
 
-Este projeto está licenciado sob a **Licença MIT**.
+Este projeto está licenciado sob a Licença **MIT**.
 
-Consulte o arquivo [LICENSE](LICENSE) para mais informações.
+Consulte o arquivo **LICENSE** para mais informações.
 
 ---
 
@@ -246,9 +231,3 @@ Consulte o arquivo [LICENSE](LICENSE) para mais informações.
 **Fabio André Zatta**
 
 Projeto desenvolvido como iniciativa de estudo, portfólio e contribuição tecnológica voltada ao gerenciamento de territórios e publicações.
-
----
-
-## Histórico
-
-Consulte o arquivo **CHANGELOG.md** para acompanhar todas as versões do projeto.
