@@ -125,16 +125,20 @@ Implementação completa da autenticação.
 
 # Próxima Release
 
-## 0.4.0
+# Release 0.4.0
 
-Prevê a implementação de:
+## Sprint 4
 
-- Publicadores
-- CRUD completo
-- Regras de negócio
-- Relacionamentos
-- APIs
-- Testes
+### Módulo Publishers
+
+✔ CRUD completo
+✔ Segurança JWT
+✔ API REST
+✔ Banco PostgreSQL
+✔ Regras de negócio
+✔ Testes Postman
+
+
 
 ---
 
@@ -193,7 +197,6 @@ Primeira versão estável.
 
 # Próximas Grandes Entregas
 
-- Gestão de Publicadores
 - Gestão de Territórios
 - Gestão de Publicações
 - Dashboard

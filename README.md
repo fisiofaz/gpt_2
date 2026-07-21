@@ -151,10 +151,19 @@ Toda a documentação técnica encontra-se na pasta **docs/**.
 - Flyway
 - MapStruct
 - Tratamento Global de Exceções
+- Cadastro de publicadores
+- Atualização de publicadores
+- Exclusão de publicadores
+- Busca por ID
+- Listagem
+- Paginação
+- Filtros
+- Validações de negócio
+- Integração com Congregation
+- Segurança JWT
 
 ## Em desenvolvimento
 
-- Publicadores
 - Territórios
 - Publicações
 - Empréstimos

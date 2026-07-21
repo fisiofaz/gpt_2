@@ -1,4 +1,4 @@
-CREATE TABLE congregation (
+CREATE TABLE congregations (
 
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 

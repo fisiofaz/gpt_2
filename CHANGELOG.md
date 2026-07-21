@@ -16,6 +16,24 @@ O formato deste documento é baseado em Keep a Changelog e o projeto segue Seman
 
 ---
 
+## [0.4.0] - 2026-07-21
+
+### Added
+
+- Módulo Publishers
+- CRUD completo
+- DTOs
+- MapStruct
+- Use Cases
+- Service
+- Controller
+- Migration Flyway V4
+- Integração com Congregation
+- Segurança JWT
+- Validações de negócio
+
+---
+
 # [0.3.0] - 2026-07-20
 
 ## Added

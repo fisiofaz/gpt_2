@@ -2,6 +2,7 @@ package br.com.gtp.users.domain.entity;
 
 import java.time.LocalDateTime;
 
+import br.com.gtp.congregation.domain.entity.Congregation;
 import br.com.gtp.shared.entity.BaseEntity;
 import br.com.gtp.shared.enums.Role;
 import br.com.gtp.shared.enums.UserStatus;
@@ -9,7 +10,10 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.JoinColumn;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -44,5 +48,9 @@ public class User extends BaseEntity {
     private UserStatus status;
 
     private LocalDateTime lastLogin;
+    
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "congregation_id")
+    private Congregation congregation;
 
 }
