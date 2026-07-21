@@ -15,6 +15,8 @@ CREATE TABLE users (
     role VARCHAR(30) NOT NULL,
 
     status VARCHAR(30) NOT NULL,
+    
+    last_login TIMESTAMP,
 
     created_at TIMESTAMP NOT NULL,
 

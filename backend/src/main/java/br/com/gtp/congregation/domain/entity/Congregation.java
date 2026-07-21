@@ -16,7 +16,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "congregation")
+@Table(name = "congregations")
 public class Congregation extends BaseEntity {
 
     @Column(nullable = false, unique = true, length = 20)
