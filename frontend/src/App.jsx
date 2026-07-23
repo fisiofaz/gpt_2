@@ -1,13 +1,7 @@
-import './App.css'
+import AppRoutes from '@/app/routes';
 
 function App() {
-
-
-  return (
-      <>
-        <h1>Vite + React</h1>
-      </>
-  )
+  return <AppRoutes />;
 }
 
-export default App
+export default App;
